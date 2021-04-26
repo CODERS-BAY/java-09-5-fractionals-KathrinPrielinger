@@ -9,6 +9,8 @@ public class FractionalTest1 {
 
     @Test
     // A fractional can be created if positive natural numbers are passed as numerator and denominator
+    //Ein Bruch kann erzeugt werden, wenn positive natürliche Zahlen als Zähler und Nenner übergeben werden
+
     public void testFractionalCreation() {
         Fractional fractional = new Fractional(1, 2);
 
@@ -18,6 +20,7 @@ public class FractionalTest1 {
 
     @Test
     // A fractional can be created if negative natural numbers are passed as numerator and denominator
+    //Ein Bruch kann erzeugt werden, wenn negative natürliche Zahlen als Zähler und Nenner übergeben werden
     public void testCreationWithNegativeNumerator() {
         Fractional fractional = new Fractional(1, -2);
 
@@ -27,6 +30,7 @@ public class FractionalTest1 {
 
     @Test
     // An IllegalArgumentException should be thrown when a negative value is passed for the denominator
+    //Eine IllegalArgumentException sollte ausgelöst werden, wenn ein negativer Wert für den Nenner übergeben wird
     public void testCreationWithNegativeDenominator() {
         Fractional fractional = new Fractional(-1, 2);
 
@@ -44,6 +48,7 @@ public class FractionalTest1 {
 
     @Test
     // An IllegalArgumentException should be thrown when a null numerator is passed
+    // Eine IllegalArgumentException sollte ausgelöst werden, wenn ein Nullzähler übergeben wird
     public void testCreationWithNullNumerator() {
         assertThrows(IllegalArgumentException.class,
                 () -> new Fractional(null, 2),
@@ -52,6 +57,7 @@ public class FractionalTest1 {
 
     @Test
     // An IllegalArgumentException should be thrown when a negative value is passed for the denominator
+    // Eine IllegalArgumentException sollte ausgelöst werden, wenn ein negativer Wert für den Nenner übergeben wird
     public void testCreationWithZeroDenominator() {
         assertThrows(IllegalArgumentException.class,
                 () -> new Fractional(2, 0),
